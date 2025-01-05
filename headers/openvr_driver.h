@@ -2320,6 +2320,29 @@ VR_CAMERA_DECL_ALIGN( 8 ) struct CameraVideoStreamFrame_t
 
 namespace vr
 {
+	typedef uint64_t vrmb_typea;
+
+	enum vrmb_typeb
+	{
+		valuea = 0,
+		valueb = 0,
+	};
+
+	class IVRMailbox
+	{
+	public:
+		virtual vrmb_typeb undoc1(const char *a, vr::vrmb_typea *b, char *c, uint32_t d) = 0;
+		virtual vrmb_typeb undoc2( vrmb_typea a ) = 0;
+		virtual vrmb_typeb undoc3( vrmb_typea a, const char *b, const char *c ) = 0;
+		virtual vrmb_typeb undoc4( vrmb_typea a, char *b, uint32_t c, uint32_t *d ) = 0;
+	};
+
+	static const char *IVRMailbox_Version = "IVRMailbox_002";
+}
+
+
+namespace vr
+{
 	enum EVRSettingsError
 	{
 		VRSettingsError_None = 0,
